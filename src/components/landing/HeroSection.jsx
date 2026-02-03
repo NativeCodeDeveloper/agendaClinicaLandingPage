@@ -13,7 +13,7 @@ export default function HeroSection() {
                 alt="Decorative Overlay"
                 width={200}
                 height={200}
-                className="absolute top-6 left-1/2 -translate-x-1/2 z-[5] pointer-events-none opacity-90 hidden md:block"
+                className="absolute top-6 right-6 z-[5] pointer-events-none opacity-90 hidden md:block"
             />
 
             {/* Logo - Mobile */}
@@ -22,7 +22,7 @@ export default function HeroSection() {
                 alt="Decorative Overlay"
                 width={150}
                 height={150}
-                className="absolute top-4 left-1/2 -translate-x-1/2 z-[5] pointer-events-none opacity-90 block md:hidden"
+                className="absolute top-4 right-4 z-[5] pointer-events-none opacity-90 block md:hidden"
             />
 
 
@@ -47,6 +47,26 @@ export default function HeroSection() {
                             Automatiza agendamientos, pagos y fichas clínicas en un solo sistema.
                             Recupera el control de tu centro y olvídate del caos administrativo.
                         </p>
+
+                        <div className="mb-10 inline-flex flex-col items-center lg:items-start gap-2 rounded-2xl border border-purple-500/30 bg-white/5 px-6 py-4 backdrop-blur">
+                            <span className="text-sm uppercase tracking-wide text-purple-400">
+                                Valor implementación
+                            </span>
+
+                            <div className="flex items-end gap-2">
+                                <span className="text-4xl md:text-5xl font-bold text-white">
+                                    $250.000
+                                </span>
+                                <span className="text-base text-gray-400 mb-1">
+                                    CLP
+                                </span>
+                            </div>
+
+                            <p className="text-sm md:text-base text-gray-400 max-w-md">
+                                Pago único para clínicas y centros estéticos.
+                                Sin mensualidades abusivas, sin contratos engañosos.
+                            </p>
+                        </div>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
 
