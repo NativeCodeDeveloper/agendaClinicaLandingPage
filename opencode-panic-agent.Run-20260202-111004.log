@@ -1,0 +1,23 @@
+Panic in agent.Run: runtime error: invalid memory address or nil pointer dereference
+
+Time: 2026-02-02T11:10:04-03:00
+
+Stack Trace:
+goroutine 89527 [running]:
+runtime/debug.Stack()
+	/opt/hostedtoolcache/go/1.24.4/x64/src/runtime/debug/stack.go:26 +0x64
+github.com/opencode-ai/opencode/internal/logging.RecoverPanic({0x1059b2772, 0x9}, 0x1400004df50)
+	/home/runner/work/opencode/opencode/internal/logging/logger.go:85 +0x264
+panic({0x10618dd80?, 0x10713e110?})
+	/opt/hostedtoolcache/go/1.24.4/x64/src/runtime/panic.go:792 +0x124
+github.com/opencode-ai/opencode/internal/llm/agent.(*agent).processEvent(0x14000414b40, {0x106483d58, 0x14002474a50}, {0x140008055f0, 0x24}, 0x14001e85700, {{0x1059a7c25, 0x5}, {0x0, 0x0}, ...})
+	/home/runner/work/opencode/opencode/internal/llm/agent/agent.go:480 +0x1a0
+github.com/opencode-ai/opencode/internal/llm/agent.(*agent).streamAndHandleEvents(0x14000414b40, {0x106483d90, 0x1400051c8c0}, {0x140008055f0, 0x24}, {0x140001e8008, 0xb, 0x16})
+	/home/runner/work/opencode/opencode/internal/llm/agent/agent.go:340 +0x3d8
+github.com/opencode-ai/opencode/internal/llm/agent.(*agent).processGeneration(0x14000414b40, {0x106483d90, 0x1400051c8c0}, {0x140008055f0, 0x24}, {0x1400162b800, 0xf}, {0x0, _, _})
+	/home/runner/work/opencode/opencode/internal/llm/agent/agent.go:284 +0x5a8
+github.com/opencode-ai/opencode/internal/llm/agent.(*agent).Run.func1()
+	/home/runner/work/opencode/opencode/internal/llm/agent/agent.go:219 +0x2b4
+created by github.com/opencode-ai/opencode/internal/llm/agent.(*agent).Run in goroutine 1
+	/home/runner/work/opencode/opencode/internal/llm/agent/agent.go:210 +0x244
+
