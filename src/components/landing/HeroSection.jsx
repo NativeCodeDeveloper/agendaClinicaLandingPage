@@ -11,8 +11,8 @@ export default function HeroSection() {
             <Image
                 src="/ncode.png"
                 alt="Decorative Overlay"
-                width={300}
-                height={300}
+                width={200}
+                height={200}
                 className="absolute top-6 left-1/2 -translate-x-1/2 z-[5] pointer-events-none opacity-90 hidden md:block"
             />
 

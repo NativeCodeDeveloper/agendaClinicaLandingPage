@@ -18,13 +18,18 @@ export default function StickyMobileCTA() {
                         <MessageCircle className="w-5 h-5" strokeWidth={2.5} />
                         <span>WhatsApp</span>
                     </Link>
-                    <Link
-                        href="#contacto"
+                    <button
+                        onClick={() => {
+                            const element = document.getElementById('contacto');
+                            if (element) {
+                                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }}
                         className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3.5 rounded-2xl font-semibold text-sm shadow-lg shadow-purple-500/25 active:scale-[0.98] transition-transform duration-150 hover:shadow-xl hover:shadow-purple-500/30"
                     >
                         <span>Cotizar Ahora</span>
                         <ArrowUpRight className="w-5 h-5" strokeWidth={2.5} />
-                    </Link>
+                    </button>
                 </div>
             </div>
         </div>
