@@ -7,22 +7,22 @@ export default function HeroSection() {
         <section className="relative w-full min-h-screen flex items-center justify-center bg-[#0a0a0a] overflow-hidden pt-20 pb-20 lg:pt-0">
             {/* Background Gradients */}
 
-    <Image
-      src="/ncode.png"
-      alt="Decorative Overlay"
-      width={300}
-      height={300}
-      className="absolute top-6 left-1/2 -translate-x-1/2 z-20 pointer-events-none opacity-90 hidden md:block"
-    />
+            {/* Logo - Desktop */}
+            <Image
+                src="/ncode.png"
+                alt="Decorative Overlay"
+                width={300}
+                height={300}
+                className="absolute top-6 left-1/2 -translate-x-1/2 z-[5] pointer-events-none opacity-90 hidden md:block"
+            />
 
-
-
+            {/* Logo - Mobile */}
             <Image
                 src="/ncode.png"
                 alt="Decorative Overlay"
                 width={150}
                 height={150}
-                className="absolute top-6 left-1/2 -translate-x-1/2 z-20 pointer-events-none opacity-90 block md:hidden"
+                className="absolute top-4 left-1/2 -translate-x-1/2 z-[5] pointer-events-none opacity-90 block md:hidden"
             />
 
 
@@ -36,15 +36,10 @@ export default function HeroSection() {
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
                     {/* Content */}
-                    <div className="flex-1 text-center lg:text-left">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/30 border border-purple-500/30 mb-6">
-                            <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
-                            <span className="text-xs font-medium text-cyan-300 tracking-wide uppercase">
-                                Sistema Operativo para Clínicas
-                            </span>
-                        </div>
+                    <div className=" flex-1 text-center lg:text-left">
+    <br/> <br/>
 
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                             ¿Tu agenda se desordena, te cancelan y el <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">WhatsApp te consume?</span>
                         </h1>
 
@@ -59,7 +54,7 @@ export default function HeroSection() {
 
                         </div>
 
-                        <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4 text-sm text-gray-500">
+                        <div className="hidden md:block flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-4 text-sm text-gray-500">
                             <div className="text-base flex items-center gap-2">
                                 <CheckCircle className="w-4 h-4 text-purple-400" />
                                 <span>Implementación guiada</span>
@@ -76,7 +71,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Image/Mockup */}
-                    <div className="flex-1 flex justify-center lg:justify-end">
+                    <div className="flex-1 flex justify-center lg:justify-end -mt-10">
 
                         <Image
                           src="/pc.png"

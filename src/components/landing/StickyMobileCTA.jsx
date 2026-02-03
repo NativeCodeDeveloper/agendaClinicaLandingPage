@@ -4,22 +4,28 @@ import Link from 'next/link';
 
 export default function StickyMobileCTA() {
     return (
-        <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200 z-50 md:hidden pb-safe shadow-[0_-5px_20px_rgba(0,0,0,0.1)]">
-            <div className="flex gap-3">
-                <Link
-                    href="https://wa.me/56966091038?text=Hola,%20quiero%20automatizar%20mi%20centro"
-                    className="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-bold text-sm shadow-sm"
-                >
-                    <MessageCircle className="w-5 h-5" />
-                    Hablar por WhatsApp
-                </Link>
-                <Link
-                    href="#contacto"
-                    className="flex-1 flex items-center justify-center gap-2 bg-purple-600 text-white py-3 rounded-xl font-bold text-sm shadow-sm"
-                >
-                    Cotizar
-                    <ArrowUpRight className="w-5 h-5" />
-                </Link>
+        <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+            {/* Backdrop blur effect */}
+            <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/90 to-white/80 backdrop-blur-lg border-t border-gray-200/50"></div>
+
+            {/* Content */}
+            <div className="relative p-3 pb-safe">
+                <div className="flex gap-2.5">
+                    <Link
+                        href="https://wa.me/56966091038?text=Hola,%20quiero%20automatizar%20mi%20centro"
+                        className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-[#25D366] to-[#1fb855] text-white py-3.5 rounded-2xl font-semibold text-sm shadow-lg shadow-green-500/25 active:scale-[0.98] transition-transform duration-150 hover:shadow-xl hover:shadow-green-500/30"
+                    >
+                        <MessageCircle className="w-5 h-5" strokeWidth={2.5} />
+                        <span>WhatsApp</span>
+                    </Link>
+                    <Link
+                        href="#contacto"
+                        className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-purple-700 text-white py-3.5 rounded-2xl font-semibold text-sm shadow-lg shadow-purple-500/25 active:scale-[0.98] transition-transform duration-150 hover:shadow-xl hover:shadow-purple-500/30"
+                    >
+                        <span>Cotizar Ahora</span>
+                        <ArrowUpRight className="w-5 h-5" strokeWidth={2.5} />
+                    </Link>
+                </div>
             </div>
         </div>
     );
