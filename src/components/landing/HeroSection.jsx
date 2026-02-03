@@ -13,17 +13,19 @@ export default function HeroSection() {
                 alt="Decorative Overlay"
                 width={200}
                 height={200}
-                className="absolute top-6 right-6 z-[5] pointer-events-none opacity-90 hidden md:block"
+                className="absolute top-6 left-1/2 -translate-x-1/2 z-[5] pointer-events-none opacity-90 hidden md:block"
             />
 
             {/* Logo - Mobile */}
-            <Image
-                src="/ncode.png"
-                alt="Decorative Overlay"
-                width={150}
-                height={150}
-                className="absolute top-4 right-4 z-[5] pointer-events-none opacity-90 block md:hidden"
-            />
+            <div className="absolute top-6 sm:top-8 left-1/2 -translate-x-1/2 z-[5] block md:hidden pointer-events-none">
+                <Image
+                    src="/ncode.png"
+                    alt="Logo NativeCode"
+                    width={130}
+                    height={130}
+                    className="opacity-90"
+                />
+            </div>
 
 
 
@@ -36,8 +38,7 @@ export default function HeroSection() {
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
                     {/* Content */}
-                    <div className=" flex-1 text-center lg:text-left">
-    <br/> <br/>
+                    <div className=" flex-1 text-center lg:text-left pt-24 sm:pt-28">
 
                         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                             ¿Tu agenda se desordena, te cancelan y el <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">WhatsApp te consume?</span>
